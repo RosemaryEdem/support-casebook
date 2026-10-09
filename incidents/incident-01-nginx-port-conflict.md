@@ -42,6 +42,8 @@ sudo ss -tulpn | grep :80
 
 Finding: The output identified Caddy as the process using port 80.
 
+![ss output showing caddy on port 80](incident-01-ss-output.png)
+
 Step 3: Checked the Caddy service
 
 ```bash
@@ -84,6 +86,8 @@ curl -I localhost
 ```
 
 Result: "HTTP/1.1 200 OK", served by Nginx/1.24.0.
+
+![nginx running and 200 OK](incident-01-verification.png)
 
 This confirmed that Nginx was responding successfully to a local HTTP request.
 
